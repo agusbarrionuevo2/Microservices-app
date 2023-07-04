@@ -1,20 +1,17 @@
 import { useEffect} from "react"
 import { getAllPlanets, getPlanet } from "./redux/actions"
 import { useSelector, useDispatch } from 'react-redux'
+import SearchBar from "./components/SearchBar"
+import Detail from "./components/Detail"
+import { NavLink, Route, Routes } from "react-router-dom";
 
 function App() {
-  const dispatch = useDispatch()
-  useEffect(()=> {
-    dispatch(getPlanet('4'))
-    // dispatch(getAllPlanets())
-  },[])
-  const planet = useSelector((state) => state.planet)
-  const planets = useSelector((state) => state.planets)
-  console.log(planet)
-  console.log(planets)
   return (
     <>
-      <h1>Hola</h1>
+      <SearchBar/>
+      <Routes>
+        <Route path="/detail/:id" Component={Detail}></Route>
+      </Routes>
     </>
   )
 }

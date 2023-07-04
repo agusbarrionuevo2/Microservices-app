@@ -1,4 +1,4 @@
-import { GET_ALL_CHARACTERS, GET_ALL_FILMS, GET_ALL_PLANETS, GET_CHARACTER, GET_FILM, GET_PLANET } from "./actions"
+import { CLEAN_DETAIL, GET_ALL_CHARACTERS, GET_ALL_FILMS, GET_ALL_PLANETS, GET_CHARACTER, GET_FILM, GET_PLANET } from "./actions"
 
 const initialState = {
 	planets: [],
@@ -45,6 +45,12 @@ const reducer = (state = initialState, {type, payload}) => {
 			return {
 				...state,
 				film: payload
+			}
+		}
+		case CLEAN_DETAIL: {
+			return {
+				...state,
+				film: {}
 			}
 		}
 		default:
