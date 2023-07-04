@@ -7,16 +7,16 @@ export default function Detail() {
   const dispatch = useDispatch();
   const { id } = useParams();
   const film = useSelector((state) => state.film);
-  useEffect(() => {
-    dispatch(getFilm(id));
-    return () => {
-      dispatch(cleanDetail());
-    };
-  }, [dispatch, id]);
-  console.log(film);
+    useEffect(() => {
+      dispatch(getFilm(id));
+      return () => {
+        dispatch(cleanDetail());
+      };
+    }, [dispatch, id]);
+    console.log(film);
   return (
     <>
-      <h1>HOLA</h1>
+      <h1>Detail</h1>
       <h1>{film.data?.title}</h1>
     </>
   );

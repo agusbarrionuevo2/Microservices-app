@@ -1,6 +1,7 @@
 export default function Filters(){
 	return(
 		<>
+		<h3>filters</h3>
 		</>
 	)
 }

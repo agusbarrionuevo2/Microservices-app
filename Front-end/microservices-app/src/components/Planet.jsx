@@ -1,16 +1,18 @@
 import { useEffect } from "react"
 import { useSelector, useDispatch } from 'react-redux'
 
-export default function Cards(){
+
+export default function Planet({name}){
 	const dispatch = useDispatch()
 	useEffect(()=>{
 		
 	},[])
-	// const planet = useSelector((state) => state.planet)
 	return(
 		<>
+			<h1>{name}</h1>
 		</>
 	)
 }
 
-//contenedor de todas las cards
+
+//card en especifico
