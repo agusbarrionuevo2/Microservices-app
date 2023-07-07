@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { cleanDetail, getFilm } from "../redux/actions";
 import { useParams } from "react-router-dom";
 
-export default function Detail() {
+export default function FilmDetail() {
   const dispatch = useDispatch();
   const { id } = useParams();
   const film = useSelector((state) => state.film);
@@ -13,7 +13,6 @@ export default function Detail() {
         dispatch(cleanDetail());
       };
     }, [dispatch, id]);
-    console.log(film);
   return (
     <>
       <h1>Detail</h1>

@@ -1,10 +1,12 @@
-import Detail from "./components/Detail";
 import { Route, Routes } from "react-router-dom";
 import Landing from "./components/Landing";
 import Home from "./components/Home";
 import AllPlanets from "./components/AllPlanets";
 import AllFilms from "./components/AllFilms";
 import AllCharacters from "./components/AllCharacters";
+import FilmDetail from "./components/FilmDetail";
+import PlanetDetail from "./components/PlanetDetail";
+import CharacterDetail from "./components/CharacterDetail";
 
 function App() {
   return (
@@ -39,7 +41,9 @@ function App() {
               <AllCharacters />
             </div>
           }></Route>
-        <Route path="/detail/:id" Component={Detail}></Route>
+        <Route path="/detail-film/:id" Component={FilmDetail}></Route>
+        <Route path="/detail-planet/:id" Component={PlanetDetail}></Route>
+        <Route path="/detail-character/:id" Component={CharacterDetail}></Route>
       </Routes>
     </>
   );
