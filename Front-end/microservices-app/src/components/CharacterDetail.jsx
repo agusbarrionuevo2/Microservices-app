@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { cleanDetail, getCharacter } from "../redux/actions";
+import { cleanCharacter, getCharacter } from "../redux/actions";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -9,9 +9,9 @@ export default function CharacterDetail () {
 	const navigate = useNavigate()
   	const { id } = useParams();
 	  useEffect(() => {
-		  dispatch(getCharacter(id)); //tengo que hacer uno que funcione para character
+		  dispatch(getCharacter(id)); 
 		  return () => {
-			  dispatch(cleanDetail());
+			  dispatch(cleanCharacter());
 			};
 		}, [dispatch, id]);
 	const character = useSelector((state) => state.character);

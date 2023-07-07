@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { cleanDetail, getPlanet } from "../redux/actions";
+import { cleanPlanet, getPlanet } from "../redux/actions";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -11,11 +11,10 @@ export default function PlanetDetail () {
 	  useEffect(() => {
 		  dispatch(getPlanet(id));
 		  return () => {
-			  dispatch(cleanDetail()); //tengo que hacer uno que funcione para planet
+			  dispatch(cleanPlanet());
 			};
 		}, [dispatch, id]);
 	const planet = useSelector((state) => state.planet);
-	console.log(planet)
 	return(
 		<>
 			<h1>Name: {planet.data?.name}</h1>

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { cleanDetail, getFilm } from "../redux/actions";
+import { cleanFilm, getFilm } from "../redux/actions";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -12,7 +12,7 @@ export default function FilmDetail() {
     useEffect(() => {
       dispatch(getFilm(id));
       return () => {
-        dispatch(cleanDetail()); ////tengo que hacer uno que funcione para film
+        dispatch(cleanFilm());
       };
     }, [dispatch, id]);
   return (

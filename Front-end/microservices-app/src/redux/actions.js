@@ -5,7 +5,9 @@ export const GET_ALL_FILMS = 'GET_ALL_FILMS'
 export const GET_PLANET = 'GET_PLANET'
 export const GET_FILM = 'GET_FILM'
 export const GET_CHARACTER = 'GET_CHARACTER'
-export const CLEAN_DETAIL = 'CLEAN_DETAIL'
+export const CLEAN_FILM = 'CLEAN_FILM'
+export const CLEAN_CHARACTER = 'CLEAN_CHARACTER'
+export const CLEAN_PLANET = 'CLEAN_PLANET'
 
 
 //PLANETS
@@ -57,6 +59,14 @@ export const getFilm = (id) => {
 
 //CLEAN
 
-export const cleanDetail = () =>{
-	return{type:CLEAN_DETAIL}
+export const cleanFilm = () =>{
+	return{type:CLEAN_FILM}
+}
+
+export const cleanPlanet = () =>{
+	return{type:CLEAN_PLANET}
+}
+
+export const cleanCharacter = () =>{
+	return{type:CLEAN_CHARACTER}
 }
