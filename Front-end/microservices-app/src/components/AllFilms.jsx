@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useSelector, useDispatch } from 'react-redux'
 import { getAllFilms} from "../redux/actions"
 import Film from "./Film"
+import './AllFilms.css'
 
 
 export default function AllFilms(){
@@ -11,7 +12,7 @@ export default function AllFilms(){
 	},[])
 	const allFilms = useSelector(state => state.films)
 	return(
-		<>
+		<div className="films-container">
 			{
 				allFilms.data && allFilms.data.map(f=><Film
 					key={f._id}
@@ -23,6 +24,6 @@ export default function AllFilms(){
 					release_date={f.release_date}
 				/>)
 			}
-			</> 
+			</div> 
 		 )
 }

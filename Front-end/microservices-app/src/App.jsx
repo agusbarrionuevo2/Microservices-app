@@ -7,13 +7,13 @@ import AllCharacters from "./components/AllCharacters";
 import FilmDetail from "./components/FilmDetail";
 import PlanetDetail from "./components/PlanetDetail";
 import CharacterDetail from "./components/CharacterDetail";
+import './App.css'
 
 function App() {
   return (
-    <>
+      <div className="app">
       <Routes>
         <Route path="" Component={Landing}></Route>
-        <Route path="home" Component={Home}/>
         <Route
           exact
           path="home/planets"
@@ -45,7 +45,7 @@ function App() {
         <Route path="/detail-planet/:id" Component={PlanetDetail}></Route>
         <Route path="/detail-character/:id" Component={CharacterDetail}></Route>
       </Routes>
-    </>
+      </div>
   );
 }
 
