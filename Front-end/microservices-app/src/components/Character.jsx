@@ -1,8 +1,10 @@
-export default function Character({name}){
+import { NavLink } from "react-router-dom";
+
+export default function Character({name, id}){
 	
 	return(
 		<>
-			<h1>{name}</h1>
+			<NavLink to={`/detail-character/${id}`}><h1>{name}</h1></NavLink>
 		</>
 	)
 }

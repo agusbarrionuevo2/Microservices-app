@@ -1,8 +1,10 @@
-export default function Film({title}){
+import { NavLink } from "react-router-dom";
+
+export default function Film({title, id}){
 	
 	return(
 		<>
-			<h1>{title}</h1>
+			<NavLink to={`/detail-film/${id}`}><h1>{title}</h1></NavLink>
 		</>
 	)
 }

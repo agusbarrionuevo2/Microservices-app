@@ -1,15 +1,16 @@
 import { useEffect } from "react"
 import { useSelector, useDispatch } from 'react-redux'
+import { NavLink } from "react-router-dom"
 
 
-export default function Planet({name}){
+export default function Planet({name, id}){
 	const dispatch = useDispatch()
 	useEffect(()=>{
 		
 	},[])
 	return(
 		<>
-			<h1>{name}</h1>
+			<NavLink to={`/detail-planet/${id}`}><h1>{name}</h1></NavLink>
 		</>
 	)
 }
