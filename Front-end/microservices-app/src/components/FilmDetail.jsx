@@ -18,7 +18,11 @@ export default function FilmDetail() {
   return (
     <>
       <h1>Detail</h1>
-      <h1>{film.data?.title}</h1>
+      <h1>Title: {film.data?.title}</h1>
+      <p>Director: {film.data?.director}</p>
+      <p>Planets: {film.data?.planets.map(p=> p.name)}</p>
+      <p>Producer: {film.data?.producer}</p>
+      <p>Release Date: {film.data?.release_date}</p>
       <button onClick={()=>(navigate(-1))}>Back</button>
     </>
   );

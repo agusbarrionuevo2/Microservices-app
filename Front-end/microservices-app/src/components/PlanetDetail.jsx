@@ -15,9 +15,14 @@ export default function PlanetDetail () {
 			};
 		}, [dispatch, id]);
 	const planet = useSelector((state) => state.planet);
+	console.log(planet)
 	return(
 		<>
-			<h1>{planet.data?.name}</h1>
+			<h1>Name: {planet.data?.name}</h1>
+			<p>Climate: {planet.data?.climate}</p>
+			<p>Terrain: {planet.data?.terrain}</p>
+			<p>Films: {planet.data?.films.map(f => `${f.title} `)}.</p>
+			<p>Residents: {planet.data?.residents.map(r => `${r.name} `)}.</p>
 			<button onClick={()=>(navigate(-1))}>Back</button>
 		</>
 	)
